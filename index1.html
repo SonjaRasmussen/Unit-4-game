@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <!--Required meta tags-->
+    <meta charset="UTF-8">
+    
+    <title>Crystal Count</title>
+
+    <!--Media Query-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--link reset sheet-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--link CSS  style sheet and other files-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style1.css">
+   
+    <!--Adding JavaScript and Jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>  
+
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid">
+                <h1 class="display-4">Crystal Collector</h1>
+                <p class="lead">Can you beat the computer?</p>   
+                      
+            </div>
+    </div>
+
+        <div class="main-container">
+                
+            <div class="row align-items-start">
+                  <div class="col-4">
+                    
+                    <div class="card">
+                        <div class="card-header">
+                          Instructions
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Game Instructions</h5>
+                          <p class="card-text">You will be given a random number to start the game.<br><br>
+                                                There are four crystals, by clicking a crystal you will add a specific amount of points to your total score.<br><br>
+                                                You win the game by matching your total score to the random number provided at the start of the game.<br><br>
+                                                The value of each crystal is hidden until you click on it and you must remember the value throughout the game.<br><br>
+                                                click the "Start New Game" button to get a new random number and reset the values of each crystal</p>
+                          <button type="button" class="btn btn-dark" id="start-new-game">Start New Game</button>   
+                        </div>
+                      </div>
+                  </div>
+                  
+                  
+                  <div class="col-8">
+                       <div class="card text-center">
+                        <div class="card-header">
+                                <div class="container" id="container1">
+                                            
+                                        <h1><span class="badge badge-secondary" id="random-number"></span></h1>
+                                       
+                                          
+                                        </div>
+                                        
+                                        </div>
+
+                                <div class="card-body">
+
+                                        <div class="container" id="container2">
+                                                <div class="row">
+                                                  
+                                                    <div class="col-3">
+                                                        <img src="assets/images/green.png" class="img-fluid" id="green-crystal" alt="Green">
+                                                    </div>
+                                                  
+                                                    <div class="col-3">
+                                                        <img src="assets/images/red.png" class="img-fluid" id="red-crystal" alt="Red">
+                                                    </div>
+                                                  
+                                                    <div class="col-3">    
+                                                       <img src="assets/images/blue.png" class="img-fluid" id="blue-crystal" alt="blue">
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <img src="assets/images/orange.png" class="img-fluid" id="orange-crystal" alt="orange">
+                                                    </div>
+                                         
+                                                   
+                                                
+                                                </div>
+                                              </div>
+                                            </div>
+          
+          
+                                <p class="card-text"><div class="container" id="container3">
+                                           
+                                    <h1><span class="badge badge-primary" id="running-total"></span></h1>
+
+                                </div>
+                    
+                                </p>
+        
+        
+                             <div class="card-footer text-muted" id="score">
+                                <div class="container" id="container4">
+                                <div class="row"> 
+                                <div class="col-6"> 
+                                 <div> Wins: <span id="wins"></span> </div>
+                                </div>
+                                
+                                <div class="col-6"> 
+                                <div> Losses: <span id="losses"> </span></div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+
+                                <Footer> 
+                                    <div class="card-footer text-muted">
+                                        <!--<button type="button" class="btn btn-light" id="back">Back</button>-->
+                                        <a class="btn btn-light" href="/" id="back">Back</a></div>
+                                      </div>     
+                                    </Footer>
+                                        
+
+
+
+        
+      </div>
