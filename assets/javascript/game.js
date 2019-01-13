@@ -30,15 +30,14 @@ function myrandom(min, max) {
     assert(min < max);
     return Math.floor((Math.random() * (max-min)) + min);
 }
-//reset the roung
+//reset the round, new number generated but wins and losses are still accumulating
 function resetRound() {
     randomNum = Math.floor((Math.random() * (120-19)) + 19);
-    console.log(randomNum)
     $('#random-number').text(randomNum);
     playerTotal = 0;
     $('#running-total').text(playerTotal);    
 }
-//Reset the the game
+//Reset the the game, wins/losses are set back to zero
 function reset(){
     resetRound();
     num1 = Math.floor(Math.random()*12+1);
@@ -56,15 +55,11 @@ $('#start-new-game').on('click', reset);
 
 //Clicking on the crystals
 
-
-
 function activeGame(num){
     playerTotal = playerTotal + num;
-    console.log("newPlayerTotal=" + playerTotal);
     $('#running-total').text(playerTotal);
    
-    console.log(playerTotal)
-    console.log($('#running-total').text());
+    
    
     //Win/loss condition
     
@@ -78,7 +73,7 @@ function activeGame(num){
             
 
         }
-      console.log()  
+        
 }
 
 
@@ -122,14 +117,9 @@ function loss (){
     }, 0);
 
 }
-// function callAlert{
-//     if (loss, alert("Yay, you lost!"));
-
-// else{
-
-// }    alert("Yay, you won!");
-
 });
+
+//this is my original code, then a much wiser person showed me how to get rid of the reduntant code and make it shorter
 //     playerTotal = playerTotal + num1;
 //     console.log("newPlayerTotal=" + playerTotal);
 //     $('#running-total').text(playerTotal);
@@ -194,54 +184,7 @@ function loss (){
 
 
 
-// //First actioin is for the computer to randomly chose a number between 19-120
-// // var computerChosen;
 
-
-
-// //Set up the function to choose a random number and display in the html
-// // function randomNum() {
-// //     var x = document.getElementById("random-number")
-// //     x.innerHTML = Math.floor((Math.random() * (120-19)) + 19);
-// //   }
-// //link the random number to the start button to display random number
-
-// // $(document).ready(function(){
-// //     $("#start-new-game").click(function() {
-// //         randomNum()
-// //     })
-// })
-
-// //User Clicks a Crystal 
-// var Crystal ={
-//     blue:{
-//         name: "Blue",
-//         $('#blue').on('click', function(){
-//             playerTotal= playerTotal + num1;
-//             $('#totalScore').text(playerTotal);
-
-//             if (playerTotal === randomNum){
-//                 win();
-//             }
-//             else if (playerTotal > randomNum){
-//                 loss();
-//             }
-//         })
-//     },
-//     green:{
-//         name: "Green",
-//         value: 0
-//     },
-//     orange:{
-//         name: "Orange",
-//         value: 0
-//     },
-//     red:{
-//         name: "Red",
-//         value: 0
-//     },
-// };
-   
 
 
 
