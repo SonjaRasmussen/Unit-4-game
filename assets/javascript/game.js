@@ -30,18 +30,25 @@ function myrandom(min, max) {
     assert(min < max);
     return Math.floor((Math.random() * (max-min)) + min);
 }
-
-//Reset the game
-function reset(){
+//reset the roung
+function resetRound() {
     randomNum = Math.floor((Math.random() * (120-19)) + 19);
     console.log(randomNum)
     $('#random-number').text(randomNum);
+    playerTotal = 0;
+    $('#running-total').text(playerTotal);    
+}
+//Reset the the game
+function reset(){
+    resetRound();
     num1 = Math.floor(Math.random()*12+1);
     num2 = Math.floor(Math.random()*12+1);
     num3 = Math.floor(Math.random()*12+1);
     num4 = Math.floor(Math.random()*12+1);
-    playerTotal = 0;
-    $('#running-total').text(playerTotal);
+    wins = 0;
+    losses =0;
+    $(`#wins`).text(wins);
+    $(`#losses`).text(losses);
 }
 
 //click start button to begin a new round of the same game
@@ -64,7 +71,7 @@ function activeGame(num){
     
     if (playerTotal === randomNum){
         win();
-        
+
     }
         else if (playerTotal > randomNum){
             loss();
@@ -98,7 +105,10 @@ function win(){
    
     wins++;
     $('#wins').text(wins);
-    
+    setTimeout(function() {
+        alert("Woohoo! You won!");
+        resetRound();
+    }, 0);
 }
 
 //display losses
@@ -106,7 +116,11 @@ function loss (){
    
     losses++;
     $('#losses').text(losses);
-       
+    setTimeout(function() {
+        alert("You blew it!");
+        resetRound();
+    }, 0);
+
 }
 // function callAlert{
 //     if (loss, alert("Yay, you lost!"));

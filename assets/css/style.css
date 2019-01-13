@@ -12,12 +12,18 @@
 .jumbotron{
     text-align: center; 
 }
-
-
+.card text-center{
+    padding-right: 10px;
+}
+.card{
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
 
 footer{
     background: #666666;
     height: 60px;
+   
 }
 #back{
     float: right; 
